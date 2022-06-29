@@ -28,9 +28,9 @@ export function reducer(
       const pizzas = action.payload;
 
       const entities = pizzas.reduce(
-        (entities: { [id: number]: Pizza }, pizza: Pizza) => {
+        (pizzaEntities: { [id: number]: Pizza }, pizza: Pizza) => {
           return {
-            ...entities,
+            ...pizzaEntities,
             [pizza.id]: pizza,
           };
         },
