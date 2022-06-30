@@ -77,7 +77,7 @@ export class PizzasEffects {
       pizzaActions.REMOVE_PIZZA_SUCCESS
     )
     .pipe(
-      map((pizza) => {
+      map(() => {
         return new fromRoot.Go({
           path: ["/products"],
         });
