@@ -41,7 +41,7 @@ export class ProductItemComponent implements OnInit {
         const toppings = pizzaExists
           ? pizza.toppings.map((topping) => topping.id)
           : [];
-        this.store.dispatch(new fromStore.VisualizeToppings(toppings));
+        this.store.dispatch(new fromStore.VisualiseToppings(toppings));
       })
     );
     this.toppings$ = this.store.select(fromStore.getAllToppings);
@@ -49,7 +49,7 @@ export class ProductItemComponent implements OnInit {
   }
 
   onSelect(event: number[]) {
-    this.store.dispatch(new fromStore.VisualizeToppings(event));
+    this.store.dispatch(new fromStore.VisualiseToppings(event));
   }
 
   onCreate(event: Pizza) {
